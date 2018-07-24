@@ -4,10 +4,6 @@ package com.muse.easy.adapter.helper;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.IdRes;
-import android.support.annotation.StringRes;
 
 import com.muse.easy.adapter.abslistview.BaseListViewAdapter;
 import com.muse.easy.adapter.abslistview.BaseListViewHolder;
@@ -19,53 +15,53 @@ public interface BaseViewHelper {
     interface AbsListView<VH extends BaseListViewHolder, P extends BaseListViewAdapter> {
         VH setText(int viewId, CharSequence value);
 
-        VH setText(@IdRes int viewId, @StringRes int strId);
+        VH setText(int viewId, int strId);
 
-        VH setImageResource(@IdRes int viewId, @DrawableRes int imageResId);
+        VH setImageResource(int viewId, int imageResId);
 
-        VH setBackgroundColor(@IdRes int viewId, @ColorInt int color);
+        VH setBackgroundColor(int viewId, int color);
 
-        VH setBackgroundRes(@IdRes int viewId, @DrawableRes int backgroundRes);
+        VH setBackgroundRes(int viewId, int backgroundRes);
 
-        VH setTextColor(@IdRes int viewId, @ColorInt int textColor);
+        VH setTextColor(int viewId, int textColor);
 
-        VH setImageDrawable(@IdRes int viewId, Drawable drawable);
+        VH setImageDrawable(int viewId, Drawable drawable);
 
-        VH setImageBitmap(@IdRes int viewId, Bitmap bitmap);
+        VH setImageBitmap(int viewId, Bitmap bitmap);
 
-        VH setAlpha(@IdRes int viewId, float value);
+        VH setAlpha(int viewId, float value);
 
-        VH setGone(@IdRes int viewId, boolean visible);
+        VH setGone(int viewId, boolean visible);
 
-        VH setVisible(@IdRes int viewId, boolean visible);
+        VH setVisible(int viewId, boolean visible);
 
-        VH linkify(@IdRes int viewId);
+        VH linkify(int viewId);
 
-        VH setTypeface(@IdRes int viewId, Typeface typeface);
+        VH setTypeface(int viewId, Typeface typeface);
 
         VH setTypeface(Typeface typeface, int... viewIds);
 
-        VH setProgress(@IdRes int viewId, int progress);
+        VH setProgress(int viewId, int progress);
 
-        VH setProgress(@IdRes int viewId, int progress, int max);
+        VH setProgress(int viewId, int progress, int max);
 
-        VH setMax(@IdRes int viewId, int max);
+        VH setMax(int viewId, int max);
 
-        VH setRating(@IdRes int viewId, float rating);
+        VH setRating(int viewId, float rating);
 
-        VH setRating(@IdRes int viewId, float rating, int max);
+        VH setRating(int viewId, float rating, int max);
 
-        VH setTag(@IdRes int viewId, Object tag);
+        VH setTag(int viewId, Object tag);
 
-        VH setTag(@IdRes int viewId, int key, Object tag);
+        VH setTag(int viewId, int key, Object tag);
 
-        VH setChecked(@IdRes int viewId, boolean checked);
+        VH setChecked(int viewId, boolean checked);
 
         VH setAdapter(P adapter);
 
-        VH addOnClickListener(@IdRes final int viewId);
+        VH addOnClickListener(final int viewId);
 
-        VH addOnLongClickListener(@IdRes final int viewId);
+        VH addOnLongClickListener(final int viewId);
     }
 
 
@@ -73,53 +69,53 @@ public interface BaseViewHelper {
 
         VH setText(int viewId, CharSequence value);
 
-        VH setText(@IdRes int viewId, @StringRes int strId);
+        VH setText(int viewId, int strId);
 
-        VH setImageResource(@IdRes int viewId, @DrawableRes int imageResId);
+        VH setImageResource(int viewId, int imageResId);
 
-        VH setBackgroundColor(@IdRes int viewId, @ColorInt int color);
+        VH setBackgroundColor(int viewId, int color);
 
-        VH setBackgroundRes(@IdRes int viewId, @DrawableRes int backgroundRes);
+        VH setBackgroundRes(int viewId, int backgroundRes);
 
-        VH setTextColor(@IdRes int viewId, @ColorInt int textColor);
+        VH setTextColor(int viewId, int textColor);
 
-        VH setImageDrawable(@IdRes int viewId, Drawable drawable);
+        VH setImageDrawable(int viewId, Drawable drawable);
 
-        VH setImageBitmap(@IdRes int viewId, Bitmap bitmap);
+        VH setImageBitmap(int viewId, Bitmap bitmap);
 
-        VH setAlpha(@IdRes int viewId, float value);
+        VH setAlpha(int viewId, float value);
 
-        VH setGone(@IdRes int viewId, boolean visible);
+        VH setGone(int viewId, boolean visible);
 
-        VH setVisible(@IdRes int viewId, boolean visible);
+        VH setVisible(int viewId, boolean visible);
 
-        VH linkify(@IdRes int viewId);
+        VH linkify(int viewId);
 
-        VH setTypeface(@IdRes int viewId, Typeface typeface);
+        VH setTypeface(int viewId, Typeface typeface);
 
         VH setTypeface(Typeface typeface, int... viewIds);
 
-        VH setProgress(@IdRes int viewId, int progress);
+        VH setProgress(int viewId, int progress);
 
-        VH setProgress(@IdRes int viewId, int progress, int max);
+        VH setProgress(int viewId, int progress, int max);
 
-        VH setMax(@IdRes int viewId, int max);
+        VH setMax(int viewId, int max);
 
-        VH setRating(@IdRes int viewId, float rating);
+        VH setRating(int viewId, float rating);
 
-        VH setRating(@IdRes int viewId, float rating, int max);
+        VH setRating(int viewId, float rating, int max);
 
-        VH setTag(@IdRes int viewId, Object tag);
+        VH setTag(int viewId, Object tag);
 
-        VH setTag(@IdRes int viewId, int key, Object tag);
+        VH setTag(int viewId, int key, Object tag);
 
-        VH setChecked(@IdRes int viewId, boolean checked);
+        VH setChecked(int viewId, boolean checked);
 
         VH setAdapter(P adapter);
 
-        VH addOnClickListener(@IdRes final int viewId);
+        VH addOnClickListener(final int viewId);
 
-        VH addOnLongClickListener(@IdRes final int viewId);
+        VH addOnLongClickListener(final int viewId);
 
     }
 

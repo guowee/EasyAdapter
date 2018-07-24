@@ -6,7 +6,6 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.IdRes;
 import android.support.v7.widget.RecyclerView;
 import android.text.util.Linkify;
 import android.util.SparseArray;
@@ -256,7 +255,7 @@ public class BaseRecyclerViewHolder extends RecyclerView.ViewHolder implements B
         return 0;
     }
 
-    public <T extends View> T getView(@IdRes int viewId) {
+    public <T extends View> T getView(int viewId) {
         View view = views.get(viewId);
         if (view == null) {
             view = convertView.findViewById(viewId);

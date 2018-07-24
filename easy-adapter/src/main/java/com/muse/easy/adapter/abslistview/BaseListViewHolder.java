@@ -6,7 +6,6 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.IdRes;
 import android.text.util.Linkify;
 import android.util.SparseArray;
 import android.view.View;
@@ -247,7 +246,7 @@ public class BaseListViewHolder implements BaseViewHelper.AbsListView {
     }
 
 
-    private <T extends View> T getView(@IdRes int viewId) {
+    private <T extends View> T getView(int viewId) {
         View view = views.get(viewId);
         if (view == null) {
             view = convertView.findViewById(viewId);

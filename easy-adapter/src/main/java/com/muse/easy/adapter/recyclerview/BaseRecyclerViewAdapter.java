@@ -1,10 +1,6 @@
 package com.muse.easy.adapter.recyclerview;
 
 import android.content.Context;
-import android.support.annotation.IntRange;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,16 +27,15 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
     protected abstract void convert(BaseRecyclerViewHolder holder, T t);
 
 
-    public BaseRecyclerViewAdapter(@LayoutRes int layoutResId, @Nullable List<T> data) {
+    public BaseRecyclerViewAdapter(int layoutResId, List<T> data) {
         this.mData = (data == null ? new ArrayList<T>() : data);
         if (layoutResId != 0) {
             this.mLayoutResId = layoutResId;
         }
     }
 
-    @NonNull
     @Override
-    public BaseRecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BaseRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         BaseRecyclerViewHolder baseViewHolder = null;
         this.mContext = parent.getContext();
         this.mLayoutInflater = LayoutInflater.from(mContext);
@@ -51,7 +46,7 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BaseRecyclerViewHolder holder, int position) {
+    public void onBindViewHolder(BaseRecyclerViewHolder holder, int position) {
         convert(holder, getItem(position));
     }
 
@@ -64,7 +59,7 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
         return createBaseViewHolder(getItemView(layoutResId, parent));
     }
 
-    private View getItemView(@LayoutRes int layoutResId, ViewGroup parent) {
+    private View getItemView(int layoutResId, ViewGroup parent) {
         return mLayoutInflater.inflate(layoutResId, parent, false);
     }
 
@@ -73,7 +68,7 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
     }
 
 
-    public T getItem(@IntRange(from = 0) int position) {
+    public T getItem(int position) {
         if (position >= 0 && position < mData.size())
             return mData.get(position);
         else

@@ -1,13 +1,10 @@
 package com.muse.easy.adapter.abslistview;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-
 
 import com.muse.easy.adapter.listener.OnItemClickListener;
 import com.muse.easy.adapter.listener.OnItemLongClickListener;
@@ -29,7 +26,7 @@ public abstract class BaseListViewAdapter<T> extends BaseAdapter {
 
     public abstract void convert(BaseListViewHolder holder, int position, T t);
 
-    public BaseListViewAdapter(@LayoutRes int layoutResId, @Nullable List<T> data) {
+    public BaseListViewAdapter(int layoutResId, List<T> data) {
         this.mData = (data == null ? new ArrayList<T>() : data);
         if (layoutResId != 0) {
             this.mLayoutResId = layoutResId;
@@ -64,7 +61,7 @@ public abstract class BaseListViewAdapter<T> extends BaseAdapter {
         return convertView;
     }
 
-    private View getItemView(@LayoutRes int layoutResId, ViewGroup parent) {
+    private View getItemView(int layoutResId, ViewGroup parent) {
         return mLayoutInflater.inflate(layoutResId, parent, false);
     }
 
