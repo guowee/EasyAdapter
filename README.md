@@ -3,7 +3,7 @@ Android 通用适配器，适用于AbsLisViewt 和 RecyclerView.
 
 Dependencies
 ```
-// Not include recyclerview-v7,you should add the dependence of recyclerview-v7.
+// Not include recyclerview-v7,you should add the dependence of recyclerview-v7 in your modules.
 implementation 'com.muse.easy.adapter:easy-adapter:1.0.0'
 ```
 
